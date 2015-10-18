@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>microscope - Build Atomic Design Systems</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <!--Style of components-->
+    <link rel="stylesheet" href="microscope.min.css">
+    <!--Style of Page--><style type="text/css">
+	body {
+		background-color: #F5F6F9;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	
+	.ms-component {
+		font-size: 14px;
+		margin: 20px 0;
+		background-color: #fff;
+		padding-top: 10px;
+		display: block;
+		border: 1px solid #ccc;
+	}
+
+	.ms-hr {
+		margin: 10px 0 0 0;
+		border:0px solid #ccc;
+		height: 1px;
+		background-color: #ccc;
+	}
+
+	.ms-complete {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #54DD00;
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	.ms-progress {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #DD001C;
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	.ms-review {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #E5D301;
+		display: inline-block;
+		margin: 0 10px;
+
+	}
+
+	.ms-component-note {
+		color: #3e3e3f;
+		padding: 10px;
+		font-size: 14px;
+		border-top: 1px solid #ccc;
+		font-weight: 300;
+	}
+
+	.ms-tabs-ul {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  list-style: none;
+	  padding-left: 0;
+	  margin: 0;
+	  -webkit-box-pack:center;
+	  -webkit-justify-content:center;
+	      -ms-flex-pack:center;
+	          justify-content:center;
+	  background-color: #e2e4e5;
+	}
+
+	.ms-tabs-li {
+		position: relative;
+		margin: 0 5px;
+	}
+
+	.ms-tabs-count {
+		position: absolute;
+		z-index: 1;
+		top: 5px;
+		right:0;
+		background-color: #3e3e3f;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		color: #fff;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		font-size: 12px;
+	}
+
+	.ms-tabs-a {
+	  text-decoration: none;
+	  padding: 15px 30px;
+	  display: inline-block;
+	  color: #73706d;
+	  z-index: 2;
+	  position: relative;
+	  font-size: 16px;
+	  font-weight: 300px;
+	}
+
+	.ms-tabs-a.ms-selected {
+	  border-bottom: 3px solid #3e3e3f;
+	  color: #262524;
+	}
+
+	#ms-content-0,
+	#ms-content-1,
+	#ms-content-2,
+	#ms-content-3,
+	#ms-content-4,
+	#ms-content-5 {
+	  display: none;
+	  margin: 0 30px;
+	}
+
+	#ms-content-0.ms-active,
+	#ms-content-1.ms-active,
+	#ms-content-2.ms-active,
+	#ms-content-3.ms-active,
+	#ms-content-4.ms-active,
+	#ms-content-5.ms-active {
+	  display: block;
+	}
+
+	.ms-color-content {
+	  display: inline-block;
+	  padding: 5px;
+	  margin: 5px;
+	  border: 1px solid #ccc;
+	}
+
+	.ms-colors {
+	  height: 70px;
+	  width: 70px;
+	  display: block;
+	  text-align: center;
+	}
+
+	.ms-color-hex {
+	  display: block;
+	  text-align: center;
+	  padding: 5px 0;
+	  font-weight: 300;
+	}
+
+</style>
+  </head>
+  <body>
+    <!--Tabs-->
+    <div class="ms-tabs">
+      <ul class="ms-tabs-ul">
+        <li class="ms-tabs-li">
+          <spam class="ms-tabs-count">2</spam><a href="#" id="global" class="ms-tabs-a ms-selected">GLOBAL</a>
+        </li>
+        <li class="ms-tabs-li">
+          <spam class="ms-tabs-count">13</spam><a href="#" id="atoms" class="ms-tabs-a">ATOMS</a>
+        </li>
+        <li class="ms-tabs-li"> 
+          <spam class="ms-tabs-count">2</spam><a href="#" id="molecules" class="ms-tabs-a">MOLECULES</a>
+        </li>
+        <li class="ms-tabs-li"> 
+          <spam class="ms-tabs-count">3</spam><a href="#" id="organisms" class="ms-tabs-a">ORGANISMS</a>
+        </li>
+        <li class="ms-tabs-li"> 
+          <spam class="ms-tabs-count">1</spam><a href="#" id="templates" class="ms-tabs-a">TEMPLATES</a>
+        </li>
+        <li class="ms-tabs-li"> 
+          <spam class="ms-tabs-count">1</spam><a href="#" id="pages" class="ms-tabs-a">PAGES</a>
+        </li>
+      </ul>
+      <!--All tabs content-->
+      <!--Global Tab-->
+      <div id="ms-content-0" class="ms-active">
+        <div class="ms-component">
+          <div class="ms-complete"></div><span>colors</span>
+          <hr class="ms-hr"> 
+          <div class="ms-color-content">
+          	<div class="ms-colors" style="background-color:#f50660;"></div>
+          	<div class="ms-color-hex">
+          		#f50660
+          	</div>
+          </div>
+
+          <div class="ms-color-content">
+          	<div class="ms-colors" style="background-color:#6506f5;"></div>
+          	<div class="ms-color-hex">
+          		#6506f5
+          	</div>
+          </div>
+
+          <div class="ms-color-content">
+          	<div class="ms-colors" style="background-color:#f57606;"></div>
+          	<div class="ms-color-hex">
+          		#f57606
+          	</div>
+          </div>
+
+          <div class="ms-color-content">
+          	<div class="ms-colors" style="background-color:#a7e403;"></div>
+          	<div class="ms-color-hex">
+          		#a7e403
+          	</div>
+          </div>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>fonts</span>
+          <hr class="ms-hr"> 
+          <p style="font-weight: 300;margin-left:5px;">
+          	"Roboto", sans-serif;
+          	<span style="">(light 300)</span>
+          </p>
+
+          <p style="font-weight: 400;margin-left:5px;">
+          	"Roboto", sans-serif;
+          	<span style="">(normal 400)</span>
+          </p>
+
+          <p style="font-weight: 700;margin-left:5px;">
+          	"Roboto", sans-serif;
+          	<span style="">(bold 700)</span>
+          </p>
+          <div class="ms-component-note"><b>note:</b>
+            <spam>By google fonts (_files/index.jade)</spam>
+          </div>
+        </div>
+      </div>
+      <!--Atoms Tab-->
+      <div id="ms-content-1">
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>headings</span>
+          <hr class="ms-hr"> 
+          <h1 class="atom-heading-lv1">Heading Level 1</h1>
+          <h2 class="atom-heading-lv2">Heading Level 2</h2>
+          <h3 class="atom-heading-lv3">Heading Level 3</h3>
+        </div>
+        <div class="ms-component">
+          <div class="ms-review"></div><span>paragraph</span>
+          <hr class="ms-hr"> 
+          <p class="atom-paragraph">
+          	Porem ipsum dolor sit amet, consectetur adipiscing elit, 
+          	sed do eiusmod tempor incididunt ut labore et dolore magna
+          	aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          	ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          	Duis aute irure dolor in reprehenderit in voluptate velit
+          	esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+
+        </div>
+        <div class="ms-component">
+          <div class="ms-complete"></div><span>small-text</span>
+          <hr class="ms-hr"> 
+          <small class="atom-small">
+           exemple
+          </small>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>text-link</span>
+          <hr class="ms-hr"> 
+          <a href="#" class="atom-text-link">
+           Text Link
+          </a>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>link-button</span>
+          <hr class="ms-hr"> 
+          <a href="#" class="atom-link-button">
+           exemple
+          </a>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>menu-link</span>
+          <hr class="ms-hr"> 
+          <a href="#" class="atom-menu-link">
+           menu link
+          </a>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>label</span>
+          <hr class="ms-hr"> 
+          <label class="atom-label">exemple</label>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>input-text</span>
+          <hr class="ms-hr"> 
+          <input type="text" placeholder="input text" class="atom-input-text">
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>textarea</span>
+          <hr class="ms-hr"> 
+          <textarea class="atom-textarea"></textarea>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>input-submit</span>
+          <hr class="ms-hr"> 
+          <input type="submit" value="submit" class="atom-input-submit">
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>favicons</span>
+          <hr class="ms-hr"> 
+          <img src="assets/images/favicon.png">
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>logo</span>
+          <hr class="ms-hr"> 
+          <img src="assets/images/logo.png" class="atom-logo">
+          <div class="ms-component-note"><b>note:</b>
+            <spam>300px X 300px</spam>
+          </div>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>banner</span>
+          <hr class="ms-hr"> 
+          <img src="assets/images/banner.png" class="atom-banner">
+          <div class="ms-component-note"><b>note:</b>
+            <spam>1200px X 450px</spam>
+          </div>
+        </div>
+      </div>
+      <!--Molecules Tab-->
+      <div id="ms-content-2">
+        <div class="ms-component"> 
+          <div class="ms-progress"></div><span>menu</span>
+          <hr class="ms-hr"> 
+          <nav class="molecule-menu">
+          	<a href="#" class="atom-menu-link">Home</a>
+          	<a href="#" class="atom-menu-link">About</a>
+          	<a href="#" class="atom-menu-link">Projects</a>
+          	<a href="#" class="atom-menu-link">Blog</a>
+          	<a href="#" class="atom-menu-link">Contact</a>
+          </nav>
+        </div>
+        <div class="ms-component"> 
+          <div class="ms-progress"></div><span>form</span>
+          <hr class="ms-hr"> 
+          <form class="molecule-form">
+          	<label class="atom-label" for="name">Name</label>
+          	<input type="text" placeholder="you name" class="atom-input-text" id="name">
+          	<label class="atom-label" for="e-mail">E-mail</label>
+          	<input type="text" placeholder="you name" class="atom-input-text" id="e-mail">
+          	<label class="atom-label" for="subject">Subject</label>
+          	<input type="text" placeholder="subject" class="atom-input-text" id="name">
+          	<label class="atom-label" for="mensagem">Mensagem</label>
+          	<textarea class="atom-textarea" id="mensagem"></textarea>
+          	<input type="submit" value="submit" class="atom-input-submit">
+          </form>
+        </div>
+      </div>
+      <!--Organisms Tab-->
+      <div id="ms-content-3">
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>header</span>
+          <hr class="ms-hr"> 
+          <header class="organism-header">
+
+          	<img src="assets/images/logo.png" class="atom-logo">
+
+          	<nav class="molecule-menu">
+          		<a href="#" class="atom-menu-link">Home</a>
+          		<a href="#" class="atom-menu-link">About</a>
+          		<a href="#" class="atom-menu-link">Projects</a>
+          		<a href="#" class="atom-menu-link">Blog</a>
+          		<a href="#" class="atom-menu-link">Contact</a>
+          	</nav>
+          	
+          </header>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>main-contact</span>
+          <hr class="ms-hr"> 
+          <main class="organism-main-contact">
+
+          	<h1 class="atom-heading-lv1">Contact Form</h1>
+
+          	<p class="atom-paragraph">
+          		Porem ipsum dolor sit amet, consectetur adipiscing elit, 
+          		sed do eiusmod tempor incididunt ut labore et dolore magna
+          		aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          		ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          		Duis aute irure dolor in reprehenderit in voluptate velit
+          		esse cillum dolore eu fugiat nulla pariatur.
+          	</p>
+
+          	<form class="molecule-form">
+          		<label class="atom-label" for="name">Name</label>
+          		<input type="text" placeholder="you name" class="atom-input-text" id="name">
+          		<label class="atom-label" for="e-mail">E-mail</label>
+          		<input type="text" placeholder="you name" class="atom-input-text" id="e-mail">
+          		<label class="atom-label" for="subject">Subject</label>
+          		<input type="text" placeholder="subject" class="atom-input-text" id="name">
+          		<label class="atom-label" for="mensagem">Mensagem</label>
+          		<textarea class="atom-textarea" id="mensagem"></textarea>
+          		<input type="submit" value="submit" class="atom-input-submit">
+          	</form>
+          	
+          </main>
+        </div>
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>footer</span>
+          <hr class="ms-hr"> 
+          <footer class="organism-footer">
+          	<small class="atom-small">
+          		developed with love by microscope
+          	</small>	
+          </footer>
+        </div>
+      </div>
+      <!--Templates Tab-->
+      <div id="ms-content-4">
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>home-page</span>
+          <hr class="ms-hr"> 
+          <div class="template-home-page">
+          	<header class="organism-header">
+
+          		<img src="assets/images/logo.png" class="atom-logo">
+
+          		<nav class="molecule-menu">
+          			<a href="#" class="atom-menu-link">Home</a>
+          			<a href="#" class="atom-menu-link">About</a>
+          			<a href="#" class="atom-menu-link">Projects</a>
+          			<a href="#" class="atom-menu-link">Blog</a>
+          			<a href="#" class="atom-menu-link">Contact</a>
+          		</nav>
+          		
+          	</header>
+
+          	<img src="assets/images/banner.png" class="atom-banner">
+          	
+          	<main class="organism-main-contact">
+
+          		<h1 class="atom-heading-lv1">Contact Form</h1>
+
+          		<p class="atom-paragraph">
+          			Porem ipsum dolor sit amet, consectetur adipiscing elit, 
+          			sed do eiusmod tempor incididunt ut labore et dolore magna
+          			aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          			ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          			Duis aute irure dolor in reprehenderit in voluptate velit
+          			esse cillum dolore eu fugiat nulla pariatur.
+          		</p>
+
+          		<form class="molecule-form">
+          			<label class="atom-label" for="name">Name</label>
+          			<input type="text" placeholder="you name" class="atom-input-text" id="name">
+          			<label class="atom-label" for="e-mail">E-mail</label>
+          			<input type="text" placeholder="you name" class="atom-input-text" id="e-mail">
+          			<label class="atom-label" for="subject">Subject</label>
+          			<input type="text" placeholder="subject" class="atom-input-text" id="name">
+          			<label class="atom-label" for="mensagem">Mensagem</label>
+          			<textarea class="atom-textarea" id="mensagem"></textarea>
+          			<input type="submit" value="submit" class="atom-input-submit">
+          		</form>
+          		
+          	</main>
+
+          	<footer class="organism-footer">
+          		<small class="atom-small">
+          			developed with love by microscope
+          		</small>	
+          	</footer>
+          </div>
+        </div>
+      </div>
+      <!--Pages Tab-->
+      <div id="ms-content-5">
+        <div class="ms-component">
+          <div class="ms-progress"></div><span>home-page</span>
+          <hr class="ms-hr"> 
+          <div class="template-home-page">
+          	<header class="organism-header">
+
+          		<img src="assets/images/logo.jpg" class="atom-logo">
+
+          		<nav class="molecule-menu">
+          			<a href="#" class="atom-menu-link">Home</a>
+          			<a href="#" class="atom-menu-link">About</a>
+          			<a href="#" class="atom-menu-link">Projects</a>
+          			<a href="#" class="atom-menu-link">Blog</a>
+          			<a href="#" class="atom-menu-link">Contact</a>
+          		</nav>
+          		
+          	</header>
+
+          	<img src="assets/images/new-york.jpg" class="atom-banner">
+          	
+          	<main class="organism-main-contact">
+
+          		<h1 class="atom-heading-lv1">Contact</h1>
+
+          		<p class="atom-paragraph">
+          			Porem ipsum dolor sit amet, consectetur adipiscing elit, 
+          			sed do eiusmod tempor incididunt ut labore et dolore magna
+          			aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          			ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          			Duis aute irure dolor in reprehenderit in voluptate velit
+          			esse cillum dolore eu fugiat nulla pariatur.
+          		</p>
+
+          		<form class="molecule-form">
+          			<label class="atom-label" for="name">Name</label>
+          			<input type="text" placeholder="you name" class="atom-input-text" id="name">
+          			<label class="atom-label" for="e-mail">E-mail</label>
+          			<input type="text" placeholder="you name" class="atom-input-text" id="e-mail">
+          			<label class="atom-label" for="subject">Subject</label>
+          			<input type="text" placeholder="subject" class="atom-input-text" id="name">
+          			<label class="atom-label" for="mensagem">Mensagem</label>
+          			<textarea class="atom-textarea" id="mensagem"></textarea>
+          			<input type="submit" value="submit" class="atom-input-submit">
+          		</form>
+          		
+          	</main>
+
+          	<footer class="organism-footer">
+          		<small class="atom-small">
+          			developed with love by microscope
+          		</small>	
+          	</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/scripts.js" type="text/javascript" async></script>
+  </body>
+</html>

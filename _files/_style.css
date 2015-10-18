@@ -1,0 +1,163 @@
+<style type="text/css">
+	body {
+		background-color: #F5F6F9;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	
+	.ms-component {
+		font-size: 14px;
+		margin: 20px 0;
+		background-color: #fff;
+		padding-top: 10px;
+		display: block;
+		border: 1px solid #ccc;
+	}
+
+	.ms-hr {
+		margin: 10px 0 0 0;
+		border:0px solid #ccc;
+		height: 1px;
+		background-color: #ccc;
+	}
+
+	.ms-complete {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #54DD00;
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	.ms-progress {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #DD001C;
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	.ms-review {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #E5D301;
+		display: inline-block;
+		margin: 0 10px;
+
+	}
+
+	.ms-component-note {
+		color: #3e3e3f;
+		padding: 10px;
+		font-size: 14px;
+		border-top: 1px solid #ccc;
+		font-weight: 300;
+	}
+
+	.ms-tabs-ul {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  list-style: none;
+	  padding-left: 0;
+	  margin: 0;
+	  -webkit-box-pack:center;
+	  -webkit-justify-content:center;
+	      -ms-flex-pack:center;
+	          justify-content:center;
+	  background-color: #e2e4e5;
+	}
+
+	.ms-tabs-li {
+		position: relative;
+		margin: 0 5px;
+	}
+
+	.ms-tabs-count {
+		position: absolute;
+		z-index: 1;
+		top: 5px;
+		right:0;
+		background-color: #3e3e3f;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		color: #fff;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		font-size: 12px;
+	}
+
+	.ms-tabs-a {
+	  text-decoration: none;
+	  padding: 15px 30px;
+	  display: inline-block;
+	  color: #73706d;
+	  z-index: 2;
+	  position: relative;
+	  font-size: 16px;
+	  font-weight: 300px;
+	}
+
+	.ms-tabs-a.ms-selected {
+	  border-bottom: 3px solid #3e3e3f;
+	  color: #262524;
+	}
+
+	#ms-content-0,
+	#ms-content-1,
+	#ms-content-2,
+	#ms-content-3,
+	#ms-content-4,
+	#ms-content-5 {
+	  display: none;
+	  margin: 0 30px;
+	}
+
+	#ms-content-0.ms-active,
+	#ms-content-1.ms-active,
+	#ms-content-2.ms-active,
+	#ms-content-3.ms-active,
+	#ms-content-4.ms-active,
+	#ms-content-5.ms-active {
+	  display: block;
+	}
+
+	.ms-color-content {
+	  display: inline-block;
+	  padding: 5px;
+	  margin: 5px;
+	  border: 1px solid #ccc;
+	}
+
+	.ms-colors {
+	  height: 70px;
+	  width: 70px;
+	  display: block;
+	  text-align: center;
+	}
+
+	.ms-color-hex {
+	  display: block;
+	  text-align: center;
+	  padding: 5px 0;
+	  font-weight: 300;
+	}
+
+</style>

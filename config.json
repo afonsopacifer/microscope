@@ -1,0 +1,130 @@
+{
+
+	"global": [
+		{
+	    "name": "colors",
+	    "states": "complete",
+	    "notes":""
+	  	},
+	  	{
+	    "name": "fonts",
+	    "states": "progress",
+	    "notes":"By google fonts (_files/index.jade)"
+	  	}
+	],
+
+	"atoms": [
+		{
+	    "name": "headings",
+	    "states": "progress",
+	    "notes":""
+	  },
+	  {
+	    "name": "paragraph",
+	    "states": "review",
+	    "notes":""
+	  },
+	  {
+	    "name": "small-text",
+	    "states": "complete",
+	    "notes":""
+	  },
+	  {
+	    "name": "text-link",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "link-button",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "menu-link",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "label",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "input-text",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "textarea",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "input-submit",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "favicons",
+	    "states": "progress",
+	    "notes": ""
+	  },
+	  {
+	    "name": "logo",
+	    "states": "progress",
+	    "notes": "300px X 300px"
+	  },
+	  {
+	    "name": "banner",
+	    "states": "progress",
+	    "notes": "1200px X 450px"
+	  }
+	],
+
+	"molecules": [
+		{
+	     "name": "menu",
+	     "states": "progress",
+	     "notes": ""
+	  	},
+	  	{
+	     "name": "form",
+	     "states": "progress",
+	     "notes": ""
+	  	}
+	],
+
+	"organisms": [
+		{
+	     "name": "header",
+	     "states": "progress",
+	     "notes": ""
+	  	},
+	  	{
+	     "name": "main-contact",
+	     "states": "progress",
+	     "notes": ""
+	  	},
+	  	{
+	     "name": "footer",
+	     "states": "progress",
+	     "notes": ""
+	  	}
+	 ],
+
+	"templates": [
+		{
+	     "name": "home-page",
+	     "states": "progress",
+	     "notes": ""
+	  	}
+	],
+
+	"pages": [
+		{
+	     "name": "home-page",
+	     "states": "progress",
+	     "notes": ""
+	  	}
+	]
+}

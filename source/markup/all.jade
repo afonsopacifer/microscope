@@ -1,0 +1,83 @@
+//Global Tab
+div(id="ms-content-0" class="ms-active")
+	- for itens in global 
+		div(class="ms-component")
+			div(class="ms-#{itens.states}")
+			span=itens.name
+			hr(class="ms-hr")
+			| 
+			|include "global/#{itens.name}.html"
+			if itens.notes
+				div.ms-component-note
+					b note:
+					spam=itens.notes
+
+//Atoms Tab
+div(id="ms-content-1")
+	- for atom in atoms 
+		div(class="ms-component")
+			div(class="ms-#{atom.states}")
+			span=atom.name
+			hr(class="ms-hr")
+			| 
+			|include "atoms/#{atom.name}.html"
+			if atom.notes
+				div.ms-component-note
+					b note:
+					spam=atom.notes
+
+//Molecules Tab
+div(id="ms-content-2")
+	- for molecule in molecules
+		div(class="ms-component") 
+			div(class="ms-#{molecule.states}")
+			span=molecule.name
+			hr(class="ms-hr")
+			| 
+			|include "molecules/#{molecule.name}.html"
+			if molecule.notes
+				div.ms-component-note
+					b note:
+					spam=molecule.notes
+
+//Organisms Tab
+div(id="ms-content-3")
+	- for organism in organisms 
+		div(class="ms-component")
+			div(class="ms-#{organism.states}")
+			span=organism.name
+			hr(class="ms-hr")
+			| 
+			|include "organisms/#{organism.name}.html"
+			if organism.notes
+				div.ms-component-note
+					b note:
+					spam=organism.notes
+
+//Templates Tab
+div(id="ms-content-4")
+	- for template in templates 
+		div(class="ms-component")
+			div(class="ms-#{template.states}")
+			span=template.name
+			hr(class="ms-hr")
+			| 
+			|include "templates/#{template.name}.html"
+			if template.notes
+				div.ms-component-note
+					b note:
+					spam=template.notes
+
+//Pages Tab
+div(id="ms-content-5")
+	- for page in pages 
+		div(class="ms-component")
+			div(class="ms-#{page.states}")
+			span=page.name
+			hr(class="ms-hr")
+			| 
+			|include "pages/#{page.name}.html"
+			if page.notes
+				div.ms-component-note
+					b note:
+					spam=page.notes
