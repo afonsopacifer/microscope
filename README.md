@@ -3,19 +3,19 @@
 > A simple and fast boirleplate that assists the development of Atomic Design Systems.
 
 ## Table of Contents
-- [About atomic design]()
-- [About the miscroscope]()
-	- [What is it?]()
-	-	[What does this do?]()
-	-	[How to do?]()
-- [Demo]()
-- [Documentation]()
-- [Tips]()
-	- [CSS Reset]()
-	- [Semantic Grid]()
-- [Contributing]()
-- [Credits]()
-- [Licence]()
+- [About atomic design](about-atomic-design)
+- [About the miscroscope](about-the-miscroscope)
+	- [What is it?](what-is-it?)
+	-	[What does this do?](what-does-this-do?)
+	-	[How to do?](how-to-do?)
+- [Demo](demo)
+- [Documentation](documentation)
+- [Tips](tips)
+	- [CSS Reset](css-reset)
+	- [Semantic Grid](semantic-grid)
+- [Contributing](contributing)
+- [Credits](credits)
+- [Licence](licence)
 
 ## About atomic design
 - [Post](http://bradfrost.com/blog/post/atomic-web-design/) by Brad Frost.
@@ -58,7 +58,7 @@ Stay attend to it , so that the components are not different in their final appl
 
 **Semantic Grid**
 
-Integrating a Semantic Grid when creating your Organisms and Templates can be a good idea! As the microscope uses Stylus as preprocessor , we suggest the [Flex Grid Framework](https://afonsopacifer.github.io/flex-grid-framework/) for the function :)
+Integrating a Semantic Grid when creating your Organisms and Templates can be a good idea! As the microscope uses Stylus as preprocessor , we suggest the [Flex Grid Framework](http://flexgridframework.com/) for the function :)
 
 ## Contributing
 If you found a bug, have any questions or want to contribute.
