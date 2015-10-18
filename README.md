@@ -3,19 +3,19 @@
 > A simple and fast boirleplate that assists the development of Atomic Design Systems.
 
 ## Table of Contents
-- [About atomic design](about-atomic-design)
-- [About the miscroscope](about-the-miscroscope)
-	- [What is it?](what-is-it?)
-	-	[What does this do?](what-does-this-do?)
-	-	[How to do?](how-to-do?)
-- [Demo](demo)
-- [Documentation](documentation)
-- [Tips](tips)
-	- [CSS Reset](css-reset)
-	- [Semantic Grid](semantic-grid)
-- [Contributing](contributing)
-- [Credits](credits)
-- [Licence](licence)
+- [About atomic design](#about-atomic-design)
+- [About the miscroscope](#about-the-miscroscope)
+	- [What is it?](#what-is-it?)
+	-	[What does this do?](#what-does-this-do?)
+	-	[How to do?](#how-to-do?)
+- [Demo](#demo)
+- [Documentation](#documentation)
+- [Tips](#tips)
+	- [CSS Reset](#css-reset)
+	- [Semantic Grid](#semantic-grid)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [Licence](#licence)
 
 ## About atomic design
 - [Post](http://bradfrost.com/blog/post/atomic-web-design/) by Brad Frost.
@@ -47,7 +47,7 @@ View a [demo](http://afonsopacifer.com/demos/microscope/) :)
 
 ## Documentation
 
-See the [Docs page]().
+See the [Docs page](docs/DOCUMENTATION.md).
 
 ## Tips
 
