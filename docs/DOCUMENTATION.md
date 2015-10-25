@@ -7,7 +7,7 @@
 	- [Edit the component notes](EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-notes)
 	- [Edit the component name](EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-name)
 	- [Reorder the components](EDIT-AN-EXISTING-COMPONENT.m#reorder-the-components)
-- Create a component
+- [Create a component](CREATE-A-COMPONENT.md)
 - Build your atomic style guide
 - Build your CSS UI framework
 - [Grunt tasks list](GRUNT-TASKS-LIST.md)
