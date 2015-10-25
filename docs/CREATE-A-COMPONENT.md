@@ -58,4 +58,4 @@
 | review      | ![review](img/review.png) |
 | complete      | ![complete](img/complete.png) |
 
-**6 - Save all files and view your new component on http://localhost:9000/**
+**6 - Save all files and view your new component on [http://localhost:9000/](http://localhost:9000/)**
