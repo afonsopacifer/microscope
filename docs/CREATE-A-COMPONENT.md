@@ -38,7 +38,7 @@
 }
 ```
 
-**4 - Add your component in the `config.json` file:**
+**5 - Add your component in the `config.json` file:**
 
 ```
 "atoms": [

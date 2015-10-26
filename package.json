@@ -2,6 +2,7 @@
   "name": "microscope",
   "author": "Afonso Pacifer",
   "license": "MIT",
+  "version": "0.1.0",
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
     "grunt": "^0.4.5",
