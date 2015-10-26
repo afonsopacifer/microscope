@@ -1,6 +1,6 @@
 # ![microscope](docs/img/microscope-cover.png)
 
-> A simple and fast boirleplate that assists the development of Atomic Design Systems.
+> A simple and fast boilerplate that assists the development of Atomic Design Systems.
 
 ## Table of Contents
 - [About atomic design](#about-atomic-design)
@@ -78,7 +78,6 @@ Go to [issues](), follow these [recommendations](CONTRIBUTING.md) and help us :)
 ## Credits
 - Thanks to [Brad Frost](https://github.com/bradfrost) for having create this incredible methodology.
 - Project inspired by [pattern lab](http://patternlab.io/).
-- English revision by [Thalles Marchetti](https://github.com/linkmarchetti).
 
 ## Licence
 
