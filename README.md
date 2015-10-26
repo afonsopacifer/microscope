@@ -47,7 +47,18 @@ View a [demo](http://afonsopacifer.com/demos/microscope/) :)
 
 ## Documentation
 
-See the [Docs page](docs/DOCUMENTATION.md).
+- [Installation](docs/INSTALLATION.md)
+- [Edit an existing component](docs/EDIT-AN-EXISTING-COMPONENT.md)
+	- [Edit the component markup and style](docs/EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-markup and-style)
+	- [Edit the component states](docs/EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-states)
+	- [Edit the component notes](docs/EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-notes)
+	- [Edit the component name](docs/EDIT-AN-EXISTING-COMPONENT.m#edit-the-component-name)
+	- [Reorder the components](docs/EDIT-AN-EXISTING-COMPONENT.m#reorder-the-components)
+- [Create a component](docs/CREATE-A-COMPONENT.md)
+- [Build your atomic style guide](docs/BUILD-YOUR-ATOMIC-STYLE-GUIDE.md)
+- [Build your CSS UI framework](docs/BUILD-YOUR-CSS-UI-FRAMEWORK.md)
+- [Grunt tasks list](docs/GRUNT-TASKS-LIST.md)
+- [Folders Structure](docs/FOLDERS-STRUCTURE.md)
 
 ## Tips
 
