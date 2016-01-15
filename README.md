@@ -79,6 +79,6 @@ Go to [issues](), follow these [recommendations](CONTRIBUTING.md) and help us :)
 - Thanks to [Brad Frost](https://github.com/bradfrost) for having create this incredible methodology.
 - Project inspired by [pattern lab](http://patternlab.io/).
 
-## Licence
+## License
 
-[MIT Licence](LICENCE.md) © [Afonso Pacifer](https://github.com/afonsopacifer)
+[MIT License](LICENSE.md) © [Afonso Pacifer](https://github.com/afonsopacifer)
