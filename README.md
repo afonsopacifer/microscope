@@ -67,7 +67,7 @@ View a [demo](http://afonsopacifer.com/demos/microscope/) :)
 
 #### CSS Reset
 
-In the [/public]() folder, we use the [normalize.css](http://necolas.github.io/normalize.css/) as a reset through a [CDN](http://cdnjs.com/libraries/normalize).
+In the [/public](public) folder, we use the [normalize.css](http://necolas.github.io/normalize.css/) as a reset through a [CDN](http://cdnjs.com/libraries/normalize).
 Stay attend to it, so that the components are not different in their final application.
 
 #### Semantic Grid
