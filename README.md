@@ -6,9 +6,9 @@
 
 - [About atomic design](#about-atomic-design)
 - [About the microscope](#about-the-microscope)
-	- [What is it?](#what-is-it?)
-	-	[What does this do?](#what-does-this-do?)
-	-	[How to do?](#how-to-do?)
+	- [What is it?](#what-is-it)
+	-	[What does this do?](#what-does-this-do)
+	-	[How to do?](#how-to-do)
 - [Demo](#demo)
 - [Documentation](#documentation)
 - [Tips](#tips)
@@ -28,17 +28,17 @@
 
 [![microscope view](docs/img/microscope-view.png)](http://afonsopacifer.com/demos/microscope/)
 
-#### What is it?
+#### <a id="what-is-it"></a>What is it?
 
 A simple and fast boilerplate that assists the development of Atomic Design Systems.
 
-#### What does this do?
+#### <a id="what-does-this-do"></a>What does this do?
 
 - Create and organize your atoms, molecules, organisms, templates and pages.
 - Generate an Atomic Style guide.
 - Build your Vanilla CSS UI framework based on your Atomic System.
 
-#### How to do?
+#### <a id="how-to-do"></a>How to do?
 
 - [Jade](http://jade-lang.com/) as the HTML template engine.
 - Preprocess the CSS with [Stylus](https://learnboost.github.io/stylus/).
@@ -65,12 +65,12 @@ View a [demo](http://afonsopacifer.com/demos/microscope/) :)
 
 ## Tips
 
-#### CSS Reset
+#### <a id="css-reset"></a>CSS Reset
 
 In the [/public]() folder, we use the [normalize.css](http://necolas.github.io/normalize.css/) as a reset through a [CDN](http://cdnjs.com/libraries/normalize).
 Stay attend to it, so that the components are not different in their final application.
 
-#### Semantic Grid
+#### <a id="semantic-grid"></a>Semantic Grid
 
 Integrating a Semantic Grid when creating your Organisms and Templates can be a good idea! As the microscope uses Stylus as a preprocessor, we suggest the [Flex Grid Framework](http://flexgridframework.com/) for the functionality :)
 
