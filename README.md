@@ -16,7 +16,7 @@
 	- [Semantic Grid](#semantic-grid)
 - [Contributing](#contributing)
 - [Credits](#credits)
-- [Licence](#licence)
+- [License](#license)
 
 ## About atomic design
 
