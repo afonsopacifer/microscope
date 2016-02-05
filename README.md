@@ -22,7 +22,7 @@
 
 - [Post](http://bradfrost.com/blog/post/atomic-web-design/) by Brad Frost.
 - [Presentation](https://vimeo.com/109130093) by Brad Frost.
-- [book](https://github.com/bradfrost/atomic-design/) by Brad Frost.
+- [Book](https://github.com/bradfrost/atomic-design/) by Brad Frost.
 
 ## About the microscope
 
