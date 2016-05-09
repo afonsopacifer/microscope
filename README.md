@@ -1,4 +1,6 @@
-# ![microscope](docs/img/microscope-cover.png)
+<p align="center">
+	<img src="docs/img/microscope-cover.png" alt="Microscope">
+<p>
 
 > A simple and fast boilerplate that assists the development of Atomic Design Systems.
 
