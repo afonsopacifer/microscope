@@ -28,7 +28,7 @@
 
 ## About the microscope
 
-[![microscope view](docs/img/microscope-view.png)](http://afonsopacifer.com/demos/microscope/)
+[![microscope view](docs/img/microscope-view.png)](http://afonsopacifer.github.io/microscope/)
 
 #### What is it?
 
@@ -48,7 +48,7 @@ A simple and fast boilerplate that assists the development of Atomic Design Syst
 
 ## Demo
 
-View a [demo](http://afonsopacifer.com/demos/microscope/) :)
+View a [demo](http://afonsopacifer.github.io/microscope/) :)
 
 ## Documentation
 
@@ -88,4 +88,4 @@ Go to [issues](issues), follow these [recommendations](CONTRIBUTING.md) and help
 
 ## License
 
-[MIT License](LICENSE.md) © [Afonso Pacifer](https://github.com/afonsopacifer)
+[MIT License](LICENSE.md) © [Afonso Pacifer](http://afonsopacifer.github.io/)
